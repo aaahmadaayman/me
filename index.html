@@ -250,18 +250,14 @@
     <!-- المرحلة الرابعة -->
     <div id="stage4" class="stage hidden">
         <div class="emoji-large">❤️</div>
-        <div class="message-box"> بحكيها دايماً
+        <div class="message-box"> ما بحكيها دايماً
 بس وجودك بحياتي نعمة كبيرة من ربنا
-
 انتِ مو بس أخت
 انتِ عيوني وضحكتي بهالفترة
-
 كل لحظة حلوة عشتها
 كان إلك فيها بصمة
-
 فرح اسمك على مسمى
 لأنك فرح بقلبي وعيوني
-
 الله يديمك بحياتي وما يحرمني منك
 ويجمعني فيك دايماً على الخير والضحكة
 لأنك عوضيني من ربنا عن اللي حكيت معهم
@@ -275,13 +271,13 @@
 <script>
     let currentStage = 1;
     
-    document.addEventListener('click', function(e) {
-        if (currentStage === 1 && e.target.classList.contains('container')) {
-            goToStage2(e);
-        } else if (currentStage === 2 && e.target.classList.contains('container')) {
-            goToStage3(e);
-        }
-    }, false);
+   document.addEventListener('click', function(e) {
+    if (currentStage === 1) {
+        goToStage2(e);
+    } else if (currentStage === 2) {
+        goToStage3(e);
+    }
+}, false);
     
     function hideAllStages() {
         document.getElementById('stage1').classList.add('hidden');
