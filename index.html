@@ -1,7 +1,7 @@
-
+<!DOCTYPE html>
 <html>
 <head>
-    <title>مررررررررحبا فررووووووووووحه</title>
+    <title>ffffaaarrraaah</title>
     <style>
         * {
             margin: 0;
@@ -10,12 +10,26 @@
         }
         
         body {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            background: linear-gradient(-45deg, #f093fb, #f5576c, #fa7199, #f093fb);
+            background-size: 400% 400%;
             color: white;
             text-align: center;
             font-family: Arial, sans-serif;
             padding: 20px;
             min-height: 100vh;
+            animation: gradientShift 15s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
         }
         
         .container {
@@ -79,17 +93,54 @@
             transform: scale(1.05);
         }
         
+        .image-container {
+            position: relative;
+            display: inline-block;
+            margin: 20px 0;
+        }
+        
+        .image-container::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(45deg, #f093fb, #f5576c, #fa7199);
+            border-radius: 15px;
+            animation: borderPulse 3s ease infinite;
+            z-index: -1;
+        }
+        
+        @keyframes borderPulse {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(240, 147, 251, 0.8);
+            }
+            50% {
+                box-shadow: 0 0 40px rgba(245, 87, 108, 0.8);
+            }
+        }
+        
         img {
             max-width: 100%;
             height: auto;
             border-radius: 10px;
-            margin: 20px 0;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             transition: all 0.3s;
+            animation: imageFloat 3s ease-in-out infinite;
+        }
+        
+        @keyframes imageFloat {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
         }
         
         img:hover {
-            transform: scale(1.1);
+            transform: scale(1.1) translateY(-15px);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
         }
         
@@ -107,13 +158,18 @@
                 transform: translateX(0);
             }
         }
+        
+        .glow-text {
+            text-shadow: 0 0 10px rgba(240, 147, 251, 0.8),
+                         0 0 20px rgba(245, 87, 108, 0.6);
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>أهلا وسهلا فروحه</h1>
-    <p>هيدا الموقع بس تشوفيه رح يتسكر </p>
+    <h1 class="glow-text">أهلا وسهلا فرررروحه</h1>
+    <p>هيدا الموقع رح يتسكر بعد متشوفيه</p>
     
     <div class="section">
         <h2>من احمد</h2>
@@ -126,14 +182,16 @@
     
     <div class="section">
         <h2>صوري</h2>
-        <img src="8d69c1b855f06a75cc50c0a5e5fa8212.jpg" alt="صورتي">
+        <div class="image-container">
+            <img src="8d69c1b855f06a75cc50c0a5e5fa8212.jpg" alt="فررروووحتي">
+        </div>
     </div>
     
     <div class="section">
-        <h2>ابتسمي فالحياة تحب من يبتسم لها</h2>
-        <p> </p>
-        <p> فروحه هيدا مابينسيكي يلي صار بس انسييييي</p>
-        <p>✓ JavaScript</p>
+        <h2>ايتها الاخت</h2>
+        <p>ابتسمي فكل حياتك وماتفكري بحد كرهك حياتك</p>
+        <p>بحبك يختي جدن جدن يلا انقلعي اطلعي/p>
+        <p></p>
     </div>
 </div>
 
