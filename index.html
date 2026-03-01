@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>لفروحه ❤️</title>
+    <title>لوحده مزه ❤️</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         * {
             margin: 0;
@@ -33,9 +35,9 @@
         }
         
         .question-1 {
-            font-size: 48px;
+            font-size: 40px;
             font-weight: bold;
-            margin-top: 100px;
+            margin-top: 50px;
             animation: slideIn 1s ease;
         }
         
@@ -51,8 +53,8 @@
         }
         
         .click-text {
-            font-size: 20px;
-            margin-top: 30px;
+            font-size: 18px;
+            margin-top: 20px;
             color: #f0f0f0;
             animation: pulse 1.5s ease infinite;
         }
@@ -63,8 +65,8 @@
         }
         
         .hearts {
-            font-size: 60px;
-            margin: 30px 0;
+            font-size: 50px;
+            margin: 20px 0;
             animation: heartFloat 2s ease-in-out infinite;
         }
         
@@ -76,7 +78,7 @@
         .heart-rain {
             position: fixed;
             pointer-events: none;
-            font-size: 30px;
+            font-size: 35px;
             animation: fall 3s linear forwards;
         }
         
@@ -92,8 +94,8 @@
         }
         
         .question-2 {
-            font-size: 32px;
-            margin: 60px 20px;
+            font-size: 24px;
+            margin: 40px 20px;
             line-height: 1.8;
             animation: fadeIn 1s ease;
         }
@@ -104,8 +106,8 @@
         }
         
         .message {
-            font-size: 24px;
-            margin: 40px 20px;
+            font-size: 16px;
+            margin: 30px 20px;
             line-height: 2;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             animation: messageAppear 2s ease;
@@ -125,8 +127,8 @@
         }
         
         .final-text {
-            font-size: 28px;
-            margin: 30px 20px;
+            font-size: 22px;
+            margin: 25px 20px;
             font-weight: bold;
             animation: glow 2s ease infinite;
         }
@@ -142,25 +144,32 @@
         }
         
         .button-group {
-            margin: 40px 0;
+            margin: 30px 0;
         }
         
         button {
             background: rgba(255, 255, 255, 0.2);
             color: white;
             border: 2px solid white;
-            padding: 15px 30px;
-            margin: 10px;
+            padding: 12px 25px;
+            margin: 8px;
             border-radius: 25px;
             cursor: pointer;
-            font-size: 18px;
+            font-size: 16px;
             transition: all 0.3s;
             font-weight: bold;
+            -webkit-appearance: none;
+            appearance: none;
+            min-width: 150px;
         }
         
         button:hover {
             background: rgba(255, 255, 255, 0.4);
-            transform: scale(1.1);
+            transform: scale(1.05);
+        }
+        
+        button:active {
+            transform: scale(0.98);
         }
         
         .yes-btn {
@@ -185,9 +194,9 @@
     
     <!-- المرحلة الثانية - القلوب -->
     <div id="stage2" class="hidden">
-        <div class="hearts">❤️ 💕 ❤️ 💕 ❤️</div>
-        <div class="hearts">💕 ❤️ 💕 ❤️ 💕</div>
-        <div class="hearts">❤️ 💕 ❤️ 💕 ❤️</div>
+        <div class="hearts">❤️ 💕 ❤️</div>
+        <div class="hearts">💕 ❤️ 💕</div>
+        <div class="hearts">❤️ 💕 ❤️</div>
         <div class="click-text">اضغطي مرة ثانية 👇</div>
     </div>
     
@@ -205,7 +214,7 @@
         <div class="message">
  ما بحكيها دايماً بس وجودك بحياتي نعمة كبيرة من ربنا 
 
-انتِ مو بس أخت
+انتِ مو بس أخت...
 انتِ عيوني وضحكتي بهالفترة 
 
 كل لحظة حلوة عشتها كان إلك فيها بصمة 
@@ -219,9 +228,9 @@
 بحبك فروحة قد الدنيا كلها وأكثر 
         </div>
         
-        <div class="final-text">مننننننيييي احممممد ���️</div>
+        <div class="final-text">منيييي احمممد ❤️</div>
         
-        <button onclick="restart()" style="margin-top: 40px;">إعادة من البداية</button>
+        <button onclick="restart()" style="margin-top: 30px;">إعادة من البداية</button>
     </div>
 </div>
 
@@ -253,7 +262,7 @@
     
     function createHeartRain() {
         const hearts = ['❤️', '💕', '💖', '💗', '💝'];
-        for (let i = 0; i < 30; i++) {
+        for (let i = 0; i < 25; i++) {
             setTimeout(() => {
                 const heart = document.createElement('div');
                 heart.className = 'heart-rain';
