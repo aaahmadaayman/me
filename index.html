@@ -1,7 +1,7 @@
 
 <html>
 <head>
-    <title>مممرررررحبا farah</title>
+    <title>مررررررررحبا فررووووووووووحه</title>
     <style>
         * {
             margin: 0;
@@ -10,43 +10,44 @@
         }
         
         body {
-            transition: background 0.3s ease;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             color: white;
             text-align: center;
             font-family: Arial, sans-serif;
             padding: 20px;
             min-height: 100vh;
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-        }
-        
-        .theme-switcher {
-            margin-bottom: 30px;
-        }
-        
-        .theme-switcher button {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            border: 2px solid white;
-            padding: 10px 15px;
-            margin: 5px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-            transition: 0.3s;
-        }
-        
-        .theme-switcher button:hover {
-            background: rgba(255, 255, 255, 0.4);
         }
         
         .container {
             max-width: 800px;
             margin: 0 auto;
+            animation: slideIn 0.8s ease;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         
         h1 {
             font-size: 50px;
             margin-bottom: 10px;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
         }
         
         p {
@@ -60,6 +61,22 @@
             padding: 30px;
             margin: 20px 0;
             border-radius: 10px;
+            transition: all 0.3s;
+            animation: fadeIn 1s ease;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .section:hover {
+            background: rgba(0, 0, 0, 0.5);
+            transform: scale(1.05);
         }
         
         img {
@@ -68,6 +85,27 @@
             border-radius: 10px;
             margin: 20px 0;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s;
+        }
+        
+        img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+        
+        h2 {
+            animation: slideInLeft 0.8s ease;
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
     </style>
 </head>
@@ -75,10 +113,10 @@
 
 <div class="container">
     <h1>أهلا وسهلا فروحه</h1>
-    <p>هاد موقع الك فروحه بيتسكر بعد ماتشوفيه</p>
+    <p>هيدا الموقع بس تشوفيه رح يتسكر </p>
     
     <div class="section">
-        <h2>من أنا</h2>
+        <h2>من احمد</h2>
         <p>يمكن ما بحكيها دايمًا بس وجودك بحياتي نعمة كبيرة من ربنا انتِ مو بس أخت انتِ  عيوني وضحكككتي بهلفتره
 كل لحظة حلوة عشتها كان إلك فيها بصمة  
 فرح اسمك على مسمى لأنك فعلا فرح بقلبي وعيوني
@@ -87,15 +125,15 @@
     </div>
     
     <div class="section">
-        <h2></h2>
-        <img src="de5c9bbc320f1d3d711a17d5c87d5d31.jpg" alt="صورتي">
+        <h2>صوري</h2>
+        <img src="8d69c1b855f06a75cc50c0a5e5fa8212.jpg" alt="صورتي">
     </div>
     
     <div class="section">
-        <h2>كليوم بيزيد ثقتي فيكي</h2>
-        <p> ابتسمي فالحياة تحب من يبتسم لها</p>
-        <p> هيدا مابينسيكي اشي بس خلصص يعني حاولي انسي</p>
+        <h2>ابتسمي فالحياة تحب من يبتسم لها</h2>
         <p> </p>
+        <p> فروحه هيدا مابينسيكي يلي صار بس انسييييي</p>
+        <p>✓ JavaScript</p>
     </div>
 </div>
 
